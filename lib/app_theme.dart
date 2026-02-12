@@ -12,6 +12,19 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     primaryColor: color.white,
 
+    scaffoldBackgroundColor: color.white,
+
+    appBarTheme: AppBarTheme(
+      backgroundColor: color.white,
+      foregroundColor: color.black,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 20,
+        fontWeight: .w500,
+        color: color.black,
+      ),
+    ),
+
     textTheme: TextTheme(
       headlineSmall: TextStyle(
         fontSize: 24,
@@ -43,6 +56,19 @@ class AppTheme {
 
   static ThemeData darkTheme = ThemeData(
     primaryColor: color.black,
+
+    scaffoldBackgroundColor: color.black,
+
+    appBarTheme: AppBarTheme(
+      backgroundColor: color.black,
+      foregroundColor: color.white,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 20,
+        fontWeight: .w500,
+        color: color.white,
+      ),
+    ),    
 
     textTheme: TextTheme(
       headlineSmall: TextStyle(
