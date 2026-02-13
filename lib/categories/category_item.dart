@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+import 'package:news/app_theme.dart';
+import 'package:news/models/category_model.dart';
+
+class CategoryItem extends StatelessWidget {
+  CategoryModel categoryModel;
+  int index;
+
+  CategoryItem({required this.categoryModel, required this.index});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: MediaQuery.sizeOf(context).height * 0.25,
+      width: double.infinity,
+
+      decoration: BoxDecoration(
+        color: AppTheme.color.white,
+        borderRadius: BorderRadius.circular(24),
+      ),
+
+      clipBehavior: .antiAlias,
+
+      child: Stack(
+        children: [
+          Image.asset(
+            'assets/images/${categoryModel.imageName}.png',
+            height: double.infinity,
+            width: double.infinity,
+            fit: .fill,
+          ),
+
+          Positioned.directional(
+            textDirection: Directionality.of(context),
+            top: 50,
+            start: index.isOdd ? 35 : null,
+            end: index.isEven ? 35 : null,
+            child: Text(
+              categoryModel.name,
+              style: Theme.of(
+                context,
+              ).textTheme.headlineMedium!.copyWith(color: AppTheme.color.black),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

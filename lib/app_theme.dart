@@ -26,6 +26,11 @@ class AppTheme {
     ),
 
     textTheme: TextTheme(
+      headlineMedium: TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.w600,
+        color: color.white,
+      ),
       headlineSmall: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.w500,
@@ -71,6 +76,11 @@ class AppTheme {
     ),    
 
     textTheme: TextTheme(
+      headlineMedium: TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.w600,
+        color: color.black,
+      ),
       headlineSmall: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.w500,

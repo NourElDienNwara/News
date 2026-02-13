@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news/app_theme.dart';
 import 'package:news/home_screen.dart';
+import 'package:news/l10n/app_localizations.dart';
 import 'package:news/providers/settings_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -26,9 +27,15 @@ class News extends StatelessWidget {
       routes: {HomeScreen.routeName: (_) => HomeScreen()},
       initialRoute: HomeScreen.routeName,
 
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: settingsProvider.languageCode == null
+          ? null
+          : Locale(settingsProvider.languageCode!),
+
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: .dark,
+      themeMode: settingsProvider.themeMode,
     );
   }
 }
