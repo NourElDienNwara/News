@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news/News/news_item.dart';
 import 'package:news/News/tab_item.dart';
 import 'package:news/app_theme.dart';
 import 'package:news/models/source_model.dart';
@@ -49,6 +50,15 @@ class _NewsViewState extends State<NewsView> {
                 currentIndex = index;
               });
             },
+          ),
+        ),
+
+        Expanded(
+          child: ListView.separated(
+            itemBuilder: (_, index) => NewsItem(),
+            separatorBuilder: (_, _) => SizedBox(height: 16),
+            itemCount: 10,
+            padding: EdgeInsets.all(16),
           ),
         ),
       ],

@@ -54,7 +54,7 @@ class AppTheme {
       labelMedium: TextStyle(
         fontSize: 12,
         fontWeight: FontWeight.w500,
-        color: color.black,
+        color: color.gray,
       ),
     ),
   );
@@ -104,7 +104,7 @@ class AppTheme {
       labelMedium: TextStyle(
         fontSize: 12,
         fontWeight: FontWeight.w500,
-        color: color.white,
+        color: color.gray,
       ),
     ),
   );
